@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proven open-source PHP web software scripts for startups</title>
+  <meta name="description" content="iScripts develops unique, paid and free open source web and mobile applications for entrepreneurs. These revenue-generating scripts used to start turnkey online businesses.">
+  <link rel="canonical" href="https://www.iscripts.com/">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="https://www.iscripts.com/favicon.ico">
+  
+  <!-- Preline Fonts (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="./src/style.css">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5L2ZSQT');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Preline Theme Initialization to avoid FOUC -->
+  <script>
+    const html = document.querySelector('html');
+    const isLightOrAuto = localStorage.getItem('hs_theme') === 'light' || (localStorage.getItem('hs_theme') === 'auto' && !window.matchMedia('(prefers-color-scheme: dark)').matches);
+    const isDarkOrAuto = localStorage.getItem('hs_theme') === 'dark' || (localStorage.getItem('hs_theme') === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+    if (isLightOrAuto) {
+      html.classList.remove('dark');
+      html.classList.add('default');
+    } else if (isDarkOrAuto) {
+      html.classList.remove('default');
+      html.classList.add('dark');
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-800 dark:bg-neutral-900 dark:text-neutral-200 antialiased font-sans flex flex-col min-h-screen">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5L2ZSQT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ========================================================================= -->
+  <!-- 1. HEADER / NAV (Preline Navbar + Mega Menu)                             -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 inset-x-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-gray-200 dark:bg-neutral-900/95 dark:border-neutral-700">
+    <nav class="max-w-[85rem] w-full mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between" aria-label="Global">
+      <!-- Logo -->
+      <a class="flex items-center focus:outline-hidden focus:ring-2 focus:ring-blue-500 rounded-md" href="/" aria-label="iScripts">
+        <img src="https://www.iscripts.com/images/iscripts-logo-wyt.webp" alt="iScripts" class="h-9 w-auto brightness-0 dark:brightness-100" width="160" height="36">
+      </a>
+
+      <!-- Mobile Controls (Theme Toggle + Hamburger) -->
+      <div class="flex items-center gap-x-1 lg:hidden">
+        <button type="button" class="hs-dark-mode-active:hidden inline-flex items-center justify-center size-9 text-gray-700 hover:bg-gray-100 rounded-lg dark:text-neutral-300 dark:hover:bg-neutral-800" data-hs-theme-click-value="dark" aria-label="Dark mode">
+          <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+        <button type="button" class="hs-dark-mode-active:inline-flex hidden items-center justify-center size-9 text-gray-700 hover:bg-gray-100 rounded-lg dark:text-neutral-300 dark:hover:bg-neutral-800" data-hs-theme-click-value="default" aria-label="Light mode">
+          <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+
+        <button type="button" class="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-lg border border-gray-200 font-medium bg-white text-gray-700 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:ring-2 focus:ring-blue-600 dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-700" id="hs-header-collapse" aria-expanded="false" aria-controls="hs-header-nav" data-hs-collapse="#hs-header-nav" aria-label="Toggle navigation">
+          <svg class="hs-collapse-open:hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
+          <svg class="hs-collapse-open:block hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <div id="hs-header-nav" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow lg:block" aria-labelledby="hs-header-collapse">
+        <div class="flex flex-col gap-y-4 gap-x-0 mt-5 lg:flex-row lg:items-center lg:justify-center lg:gap-y-0 lg:gap-x-6 lg:mt-0">
+
+          <!-- Products Mega Menu -->
+          <div class="hs-dropdown [--strategy:static] lg:[--strategy:fixed] [--adaptive:none]">
+            <button id="hs-mega-menu-products" type="button" class="hs-dropdown-toggle flex items-center w-full text-gray-700 hover:text-blue-600 font-medium py-1.5 focus:outline-hidden focus:text-blue-600 dark:text-neutral-300 dark:hover:text-blue-400 dark:focus:text-blue-400" aria-haspopup="menu" aria-expanded="false" aria-label="Products">
+              Products
+              <svg class="hs-dropdown-open:-rotate-180 duration-200 shrink-0 ms-1 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+
+            <div class="hs-dropdown-menu transition-[opacity,margin] duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-full hidden z-50 start-0 top-full bg-white lg:shadow-xl rounded-xl py-6 px-4 lg:px-8 dark:bg-neutral-900 border lg:border-gray-200 dark:border-neutral-700" role="menu" aria-labelledby="hs-mega-menu-products">
+              <div class="max-w-[85rem] mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-3">
+                  <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/editprime/">
+                    <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">EditPrime</p>
+                    <p class="text-xs text-gray-500 dark:text-neutral-400">Mobile Video Editing SDK</p>
+                  </a>
+                  <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/socialware/">
+                    <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">SocialWare</p>
+                    <p class="text-xs text-gray-500 dark:text-neutral-400">Social Networking Platform</p>
+                  </a>
+                  <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/multicart/">
+                    <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">MultiCart</p>
+                    <p class="text-xs text-gray-500 dark:text-neutral-400">Multi Vendor Shopping Cart</p>
+                  </a>
+                  <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/eswap/">
+                    <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">eSwap</p>
+                    <p class="text-xs text-gray-500 dark:text-neutral-400">Barter Exchange Platform</p>
+                  </a>
+                  <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/autohoster/">
+                    <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">AutoHoster</p>
+                    <p class="text-xs text-gray-500 dark:text-neutral-400">Web Hosting Platform</p>
+                  </a>
+                  <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/printlogic/">
+                    <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">PrintLogic</p>
+                    <p class="text-xs text-gray-500 dark:text-neutral-400">Online Design Printing Platform</p>
+                  </a>
+                  <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/reservelogic/">
+                    <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">ReserveLogic</p>
+                    <p class="text-xs text-gray-500 dark:text-neutral-400">Hotel Reservation Platform</p>
+                  </a>
+                  <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/gostores/">
+                    <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">GoStores</p>
+                    <p class="text-xs text-gray-500 dark:text-neutral-400">Online Store Builder Platform</p>
+                  </a>
+                  <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/easybiller/">
+                    <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">EasyBiller</p>
+                    <p class="text-xs text-gray-500 dark:text-neutral-400">Online Billing Service Platform</p>
+                  </a>
+                  <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/socialwallet/">
+                    <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">SocialWallet</p>
+                    <p class="text-xs text-gray-500 dark:text-neutral-400">Peer-to-Peer Lending Platform</p>
+                  </a>
+                  <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/easycreate/">
+                    <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">EasyCreate</p>
+                    <p class="text-xs text-gray-500 dark:text-neutral-400">Website Builder Platform</p>
+                  </a>
+                  <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/visualcaster/">
+                    <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">VisualCaster</p>
+                    <p class="text-xs text-gray-500 dark:text-neutral-400">Video Streaming Service Platform</p>
+                  </a>
+                  <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/locologic/">
+                    <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">Locologic</p>
+                    <p class="text-xs text-gray-500 dark:text-neutral-400">3PL Delivery Management Platform</p>
+                  </a>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-100 dark:border-neutral-800 text-center">
+                  <a class="text-sm font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 inline-flex items-center gap-x-1" href="/productlisting.php">
+                    List All →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Services Dropdown -->
+          <div class="hs-dropdown relative inline-flex">
+            <button id="hs-dropdown-services" type="button" class="hs-dropdown-toggle flex items-center w-full text-gray-700 hover:text-blue-600 font-medium py-1.5 focus:outline-hidden focus:text-blue-600 dark:text-neutral-300 dark:hover:text-blue-400 dark:focus:text-blue-400" aria-haspopup="menu" aria-expanded="false" aria-label="Services">
+              Services
+              <svg class="hs-dropdown-open:-rotate-180 duration-200 shrink-0 ms-1 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="hs-dropdown-menu transition-[opacity,margin] duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-60 hidden z-50 bg-white shadow-md rounded-xl p-2 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700" role="menu" aria-labelledby="hs-dropdown-services">
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/customization.php">Customization</a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/graphic-design-service.php">Design Services</a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/customdevelopment.php">Programming</a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/installation.php">Installation</a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/dedicated-development-services.php">Dedicated Development</a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/web-hosts.php">Suggested Web Hosts</a>
+            </div>
+          </div>
+
+          <!-- Showcase Dropdown -->
+          <div class="hs-dropdown relative inline-flex">
+            <button id="hs-dropdown-showcase" type="button" class="hs-dropdown-toggle flex items-center w-full text-gray-700 hover:text-blue-600 font-medium py-1.5 focus:outline-hidden focus:text-blue-600 dark:text-neutral-300 dark:hover:text-blue-400 dark:focus:text-blue-400" aria-haspopup="menu" aria-expanded="false" aria-label="Showcase">
+              Showcase
+              <svg class="hs-dropdown-open:-rotate-180 duration-200 shrink-0 ms-1 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="hs-dropdown-menu transition-[opacity,margin] duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-52 hidden z-50 bg-white shadow-md rounded-xl p-2 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700" role="menu" aria-labelledby="hs-dropdown-showcase">
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/listshowcases.php">Showcases</a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/addshowcases.php">Submit New</a>
+            </div>
+          </div>
+
+          <!-- Support Dropdown -->
+          <div class="hs-dropdown relative inline-flex">
+            <button id="hs-dropdown-support" type="button" class="hs-dropdown-toggle flex items-center w-full text-gray-700 hover:text-blue-600 font-medium py-1.5 focus:outline-hidden focus:text-blue-600 dark:text-neutral-300 dark:hover:text-blue-400 dark:focus:text-blue-400" aria-haspopup="menu" aria-expanded="false" aria-label="Support">
+              Support
+              <svg class="hs-dropdown-open:-rotate-180 duration-200 shrink-0 ms-1 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="hs-dropdown-menu transition-[opacity,margin] duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-56 hidden z-50 bg-white shadow-md rounded-xl p-2 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700" role="menu" aria-labelledby="hs-dropdown-support">
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/support/">Help Desk</a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/support/kb/">Knowledgebase</a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/faq.php">General FAQ</a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/web-hosts.php">Suggested Web Hosts</a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/patches.php">Patches</a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/resources.php">Resources</a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/quickstartguides.php">Quickstart Guides</a>
+            </div>
+          </div>
+
+          <!-- Contact us Dropdown -->
+          <div class="hs-dropdown relative inline-flex">
+            <button id="hs-dropdown-contact" type="button" class="hs-dropdown-toggle flex items-center w-full text-gray-700 hover:text-blue-600 font-medium py-1.5 focus:outline-hidden focus:text-blue-600 dark:text-neutral-300 dark:hover:text-blue-400 dark:focus:text-blue-400" aria-haspopup="menu" aria-expanded="false" aria-label="Contact us">
+              Contact us
+              <svg class="hs-dropdown-open:-rotate-180 duration-200 shrink-0 ms-1 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="hs-dropdown-menu transition-[opacity,margin] duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-52 hidden z-50 bg-white shadow-md rounded-xl p-2 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700" role="menu" aria-labelledby="hs-dropdown-contact">
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/partnerprogram.php">Partner Programs</a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/affiliateprogram.php">Affiliate Program</a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/support/">Help Desk</a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/viewfeedback.php">Feedback</a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/scriptrequest.php">Script Request</a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/reviews.php">Reviews</a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/contactus.php">Contact Us</a>
+            </div>
+          </div>
+
+          <!-- Blog Link -->
+          <a class="font-medium text-gray-700 hover:text-blue-600 py-1.5 focus:outline-hidden focus:text-blue-600 dark:text-neutral-300 dark:hover:text-blue-400 dark:focus:text-blue-400" href="/blog/">
+            Blog
+          </a>
+
+          <!-- Company Dropdown -->
+          <div class="hs-dropdown relative inline-flex">
+            <button id="hs-dropdown-company" type="button" class="hs-dropdown-toggle flex items-center w-full text-gray-700 hover:text-blue-600 font-medium py-1.5 focus:outline-hidden focus:text-blue-600 dark:text-neutral-300 dark:hover:text-blue-400 dark:focus:text-blue-400" aria-haspopup="menu" aria-expanded="false" aria-label="Company">
+              Company
+              <svg class="hs-dropdown-open:-rotate-180 duration-200 shrink-0 ms-1 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="hs-dropdown-menu transition-[opacity,margin] duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-52 hidden z-50 bg-white shadow-md rounded-xl p-2 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700" role="menu" aria-labelledby="hs-dropdown-company">
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/aboutus.php">About Us</a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/people.php">People</a>
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/contactus.php">Contact Us</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Mobile Login -->
+        <div class="pt-4 border-t border-gray-100 dark:border-neutral-800 lg:hidden flex flex-col gap-2">
+          <a class="py-2.5 px-4 text-center text-sm font-medium rounded-lg text-gray-700 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/logindirect.php">
+            Login
+          </a>
+        </div>
+      </div>
+
+      <!-- Desktop Right Controls: Theme Switch + Login -->
+      <div class="hidden lg:flex items-center gap-x-2">
+        <button type="button" class="hs-dark-mode-active:hidden inline-flex items-center justify-center size-9 text-gray-700 hover:bg-gray-100 rounded-lg dark:text-neutral-300 dark:hover:bg-neutral-800 transition" data-hs-theme-click-value="dark" aria-label="Dark mode">
+          <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+        <button type="button" class="hs-dark-mode-active:inline-flex hidden items-center justify-center size-9 text-gray-700 hover:bg-gray-100 rounded-lg dark:text-neutral-300 dark:hover:bg-neutral-800 transition" data-hs-theme-click-value="default" aria-label="Light mode">
+          <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+
+        <a class="py-2 px-3 inline-flex items-center gap-x-1.5 text-sm font-medium rounded-lg text-gray-700 hover:bg-gray-100 focus:outline-hidden dark:text-neutral-300 dark:hover:bg-neutral-800 transition" href="/logindirect.php">
+          Login
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- MAIN CONTENT CONTAINER                                                    -->
+  <!-- ========================================================================= -->
+  <main id="content" class="grow">
+
+    <!-- ======================================================================= -->
+    <!-- 2. HERO (Preline Hero + Carousel plugin, 6 slides)                     -->
+    <!-- ======================================================================= -->
+    <section class="relative bg-gray-50 dark:bg-neutral-800/40 border-b border-gray-200 dark:border-neutral-800 py-10 lg:py-16">
+      <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div data-hs-carousel='{
+            "loadingClasses": "opacity-0",
+            "isAutoPlay": true,
+            "speed": 6000
+          }' class="relative">
+          
+          <div class="hs-carousel relative overflow-hidden w-full min-h-[460px] md:min-h-[420px]">
+            <div class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
+              
+              <!-- Slide 1: MultiCart -->
+              <div class="hs-carousel-slide">
+                <div class="grid lg:grid-cols-12 gap-8 items-center h-full">
+                  <div class="lg:col-span-7">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white">
+                      iScripts MultiCart
+                    </h2>
+                    <p class="mt-2 text-lg sm:text-xl font-medium text-blue-600 dark:text-blue-400">
+                      Multi Vendor Shopping Cart
+                    </p>
+                    <p class="mt-4 text-base text-gray-600 dark:text-neutral-400 leading-relaxed">
+                      MultiCart is a unique multi-vendor shopping cart software that allows you to easily create your own e-commerce marketplace with multiple vendors in the backend, similar to Etsy or Amazon Marketplace.
+                    </p>
+                    <div class="mt-6">
+                      <a href="/multicart/" class="py-3 px-5 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500 shadow-md shadow-blue-600/25 transition">
+                        View Details →
+                      </a>
+                    </div>
+                  </div>
+                  <div class="lg:col-span-5 flex justify-center">
+                    <img src="https://www.iscripts.com/images/multicart_bnr.webp" alt="iScripts MultiCart" class="max-w-full h-auto rounded-xl shadow-md" width="540" height="338">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2: NetMenus -->
+              <div class="hs-carousel-slide">
+                <div class="grid lg:grid-cols-12 gap-8 items-center h-full">
+                  <div class="lg:col-span-7">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white">
+                      iScripts NetMenus
+                    </h2>
+                    <p class="mt-2 text-lg sm:text-xl font-medium text-blue-600 dark:text-blue-400">
+                      Restaurant Menu Management Platform
+                    </p>
+                    <p class="mt-4 text-base text-gray-600 dark:text-neutral-400 leading-relaxed">
+                      Create an online multi-restaurant ordering system that really delivers! Enable your users to complete orders for takeout, delivery, catering and even make reservations with participating restaurants.
+                    </p>
+                    <div class="mt-6">
+                      <a href="/netmenus/" class="py-3 px-5 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500 shadow-md shadow-blue-600/25 transition">
+                        View Details →
+                      </a>
+                    </div>
+                  </div>
+                  <div class="lg:col-span-5 flex justify-center">
+                    <img src="https://www.iscripts.com/images/banner_netmenus.webp" alt="iScripts NetMenus" class="max-w-full h-auto rounded-xl shadow-md" width="540" height="338">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3: UberforX -->
+              <div class="hs-carousel-slide">
+                <div class="grid lg:grid-cols-12 gap-8 items-center h-full">
+                  <div class="lg:col-span-7">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white">
+                      iScripts UberforX
+                    </h2>
+                    <p class="mt-2 text-lg sm:text-xl font-medium text-blue-600 dark:text-blue-400">
+                      On Demand Services Marketplace
+                    </p>
+                    <p class="mt-4 text-base text-gray-600 dark:text-neutral-400 leading-relaxed">
+                      This on-demand service platform gives you the flexibility to run any Uber-like services for medical, health, automobile, food, maid, taxi, etc. Mobile apps are available for service providers as well as users.
+                    </p>
+                    <div class="mt-6">
+                      <a href="/uberforx/" class="py-3 px-5 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500 shadow-md shadow-blue-600/25 transition">
+                        View Details →
+                      </a>
+                    </div>
+                  </div>
+                  <div class="lg:col-span-5 flex justify-center">
+                    <img src="https://www.iscripts.com/images/banner_uberforx.webp" alt="iScripts UberforX" class="max-w-full h-auto rounded-xl shadow-md" width="585" height="477">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4: Locologic -->
+              <div class="hs-carousel-slide">
+                <div class="grid lg:grid-cols-12 gap-8 items-center h-full">
+                  <div class="lg:col-span-7">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white">
+                      iScripts Locologic
+                    </h2>
+                    <p class="mt-2 text-lg sm:text-xl font-medium text-blue-600 dark:text-blue-400">
+                      3PL Delivery Management Platform
+                    </p>
+                    <p class="mt-4 text-base text-gray-600 dark:text-neutral-400 leading-relaxed">
+                      Locologic is a real-time order tracking platform for last-mile delivery companies, offering efficient order and delivery management. The platform provides a separate web console for suppliers to manage warehouse operations.
+                    </p>
+                    <div class="mt-6">
+                      <a href="/locologic/" class="py-3 px-5 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500 shadow-md shadow-blue-600/25 transition">
+                        View Details →
+                      </a>
+                    </div>
+                  </div>
+                  <div class="lg:col-span-5 flex justify-center">
+                    <img src="https://www.iscripts.com/images/banner_locologic.webp" alt="iScripts Locologic" class="max-w-full h-auto rounded-xl shadow-md" width="585" height="477">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 5: eSwap -->
+              <div class="hs-carousel-slide">
+                <div class="grid lg:grid-cols-12 gap-8 items-center h-full">
+                  <div class="lg:col-span-7">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white">
+                      iScripts eSwap
+                    </h2>
+                    <p class="mt-2 text-lg sm:text-xl font-medium text-blue-600 dark:text-blue-400">
+                      Barter Exchange Platform
+                    </p>
+                    <p class="mt-4 text-base text-gray-600 dark:text-neutral-400 leading-relaxed">
+                      Discover the power of iScripts eSwap, a feature-rich barter exchange network script where users effortlessly list, swap, or sell items. With customizable fees and an optional points system, create an engaging platform that offers flexibility and ease.
+                    </p>
+                    <div class="mt-6">
+                      <a href="/eswap/" class="py-3 px-5 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500 shadow-md shadow-blue-600/25 transition">
+                        View Details →
+                      </a>
+                    </div>
+                  </div>
+                  <div class="lg:col-span-5 flex justify-center">
+                    <img src="https://www.iscripts.com/images/banner_eswap.webp" alt="iScripts eSwap" class="max-w-full h-auto rounded-xl shadow-md" width="540" height="338">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 6: We Do Customize Our Products -->
+              <div class="hs-carousel-slide">
+                <div class="grid lg:grid-cols-12 gap-8 items-center h-full">
+                  <div class="lg:col-span-7">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white">
+                      We Do Customize Our Products
+                    </h2>
+                    <p class="mt-4 text-base text-gray-600 dark:text-neutral-400 leading-relaxed">
+                      We can customize any of our products or mobile apps to meet your specific requirements. These customization can be change in look and branding to new functionality.
+                    </p>
+                    <div class="mt-6">
+                      <a href="/customization.php" class="py-3 px-5 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500 shadow-md shadow-blue-600/25 transition">
+                        View Details →
+                      </a>
+                    </div>
+                  </div>
+                  <div class="lg:col-span-5 flex justify-center">
+                    <img src="https://www.iscripts.com/images/banner_custmisation.webp" alt="We Do Customize Our Products" class="max-w-full h-auto rounded-xl shadow-md" width="540" height="338">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <button type="button" class="hs-carousel-prev hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-10 h-full text-gray-800 hover:bg-gray-800/10 dark:text-white dark:hover:bg-white/10 rounded-s-xl" aria-label="Previous">
+            <svg class="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            <span class="sr-only">Previous</span>
+          </button>
+          <button type="button" class="hs-carousel-next hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-10 h-full text-gray-800 hover:bg-gray-800/10 dark:text-white dark:hover:bg-white/10 rounded-e-xl" aria-label="Next">
+            <span class="sr-only">Next</span>
+            <svg class="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+
+          <!-- Pagination Dots -->
+          <div class="hs-carousel-pagination flex justify-center gap-x-2 mt-4"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 3. STATS (Preline Stats block)                                         -->
+    <!-- ======================================================================= -->
+    <section class="py-10 lg:py-14 border-b border-gray-200 dark:border-neutral-800">
+      <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-center">
+          <div class="p-4">
+            <h3 class="text-3xl lg:text-4xl font-bold text-blue-600 dark:text-blue-500">15</h3>
+            <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400">Years in Business</p>
+          </div>
+          <div class="p-4">
+            <h3 class="text-3xl lg:text-4xl font-bold text-blue-600 dark:text-blue-500">150+</h3>
+            <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400">Engineers Working</p>
+          </div>
+          <div class="p-4">
+            <h3 class="text-3xl lg:text-4xl font-bold text-blue-600 dark:text-blue-500">25+</h3>
+            <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400">Products Catered</p>
+          </div>
+          <div class="p-4">
+            <h3 class="text-3xl lg:text-4xl font-bold text-blue-600 dark:text-blue-500">8000+</h3>
+            <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400">Paid Downloads</p>
+          </div>
+          <div class="col-span-2 md:col-span-1 lg:col-span-1 p-4">
+            <h3 class="text-3xl lg:text-4xl font-bold text-blue-600 dark:text-blue-500">$30M+</h3>
+            <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400">Raised By Our Start-up Clients</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 4. INTRO (Preline Split Content Block with Single H1)                  -->
+    <!-- ======================================================================= -->
+    <section class="py-10 lg:py-14 border-b border-gray-200 dark:border-neutral-800">
+      <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <div class="lg:col-span-6">
+            <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 dark:text-white leading-tight">
+              Ready to go technology platforms to start and scale your businesses
+            </h1>
+            <p class="mt-4 text-base text-gray-600 dark:text-neutral-400 leading-relaxed">
+              We help bring your startup idea to life. Our powerful technology platforms make your time to market almost zero. You can get started with your website or mobile apps with custom front-end UI, advanced admin dashboards, and powerful analytics panels in no time. Our customization team can help you make any necessary changes to these feature-rich platforms. Our 24/7 customer support helps you whenever you have a question or issue.
+            </p>
+            <div class="mt-6">
+              <a href="/productlisting.php" class="py-3 px-5 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500 transition">
+                Explore More →
+              </a>
+            </div>
+          </div>
+          <div class="lg:col-span-6 flex justify-center">
+            <img src="https://www.iscripts.com/images/webtoolkit1.webp" alt="Ready to go technology platforms" class="max-w-full h-auto rounded-xl shadow-md" width="656" height="632">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 5. WHAT YOU GET (Preline Features Icon Grid)                           -->
+    <!-- ======================================================================= -->
+    <section class="py-10 lg:py-14 border-b border-gray-200 dark:border-neutral-800">
+      <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+          <h2 class="text-2xl md:text-4xl font-bold text-gray-800 dark:text-white">
+            What You Get
+          </h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <!-- Turnkey Platforms -->
+          <div class="flex gap-x-5 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 rounded-xl p-6 shadow-2xs">
+            <div class="size-12 rounded-lg bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400 flex items-center justify-center shrink-0">
+              <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2v4"/><path d="m16.2 7.8 2.9-2.9"/><path d="M18 12h4"/><path d="m16.2 16.2 2.9 2.9"/><path d="M12 18v4"/><path d="m4.9 19.1 2.9-2.9"/><path d="M2 12h4"/><path d="m4.9 4.9 2.9 2.9"/></svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 dark:text-white">Turnkey Platforms</h3>
+              <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400 leading-relaxed">
+                All iScripts platforms are turnkey in nature. You can get your platform up and running within a few hours. All you have to do is configure them with your business data.
+              </p>
+            </div>
+          </div>
+
+          <!-- Free Installation -->
+          <div class="flex gap-x-5 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 rounded-xl p-6 shadow-2xs">
+            <div class="size-12 rounded-lg bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400 flex items-center justify-center shrink-0">
+              <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 dark:text-white">Free Installation</h3>
+              <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400 leading-relaxed">
+                Your website/mobile app can be operational in just a few hours. If you prefer not to handle the installation yourself, we offer it for free.
+              </p>
+            </div>
+          </div>
+
+          <!-- Companion Apps -->
+          <div class="flex gap-x-5 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 rounded-xl p-6 shadow-2xs">
+            <div class="size-12 rounded-lg bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400 flex items-center justify-center shrink-0">
+              <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 dark:text-white">Companion Apps</h3>
+              <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400 leading-relaxed">
+                It's not just web platforms alone; most platforms also have their mobile apps available. So, you have the option to get white labelled mobile apps as well.
+              </p>
+            </div>
+          </div>
+
+          <!-- Option to Customize -->
+          <div class="flex gap-x-5 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 rounded-xl p-6 shadow-2xs">
+            <div class="size-12 rounded-lg bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400 flex items-center justify-center shrink-0">
+              <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 dark:text-white">Option to Customize</h3>
+              <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400 leading-relaxed">
+                We do not encrypt our software. You are free to customize it to meet your business needs. If you need help, we have our customization team at your disposal.
+              </p>
+            </div>
+          </div>
+
+          <!-- White Label Solutions -->
+          <div class="flex gap-x-5 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 rounded-xl p-6 shadow-2xs">
+            <div class="size-12 rounded-lg bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400 flex items-center justify-center shrink-0">
+              <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 dark:text-white">White Label Solutions</h3>
+              <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400 leading-relaxed">
+                iScripts platforms are available as whitelabel solutions. So your customers will only see your brand, not ours.
+              </p>
+            </div>
+          </div>
+
+          <!-- Exceptional Tech Support -->
+          <div class="flex gap-x-5 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 rounded-xl p-6 shadow-2xs">
+            <div class="size-12 rounded-lg bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400 flex items-center justify-center shrink-0">
+              <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 dark:text-white">Exceptional Tech Support</h3>
+              <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400 leading-relaxed">
+                We provide dependable technical support for your web and mobile applications to assist you with any problems you may encounter.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 6. OUR TECHNOLOGY PLATFORMS (Preline Card Grid, 9 cards in exact order)-->
+    <!-- ======================================================================= -->
+    <section class="py-10 lg:py-14 border-b border-gray-200 dark:border-neutral-800">
+      <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+          <h2 class="text-2xl md:text-4xl font-bold text-gray-800 dark:text-white">
+            Our Technology Platforms
+          </h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Card 1: UberforX -->
+          <div class="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl p-5 md:p-6 dark:bg-neutral-900 dark:border-neutral-700 hover:shadow-md transition duration-200">
+            <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+              iScripts UberforX
+            </h3>
+            <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400 leading-relaxed">
+              On Demand Services Marketplace
+            </p>
+            <div class="mt-auto pt-4">
+              <a href="/uberforx/" class="text-sm font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 inline-flex items-center gap-x-1">
+                View Details →
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2: NetMenus -->
+          <div class="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl p-5 md:p-6 dark:bg-neutral-900 dark:border-neutral-700 hover:shadow-md transition duration-200">
+            <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+              iScripts NetMenus
+            </h3>
+            <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400 leading-relaxed">
+              Restaurant Menu Management Platform
+            </p>
+            <div class="mt-auto pt-4">
+              <a href="/netmenus/" class="text-sm font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 inline-flex items-center gap-x-1">
+                View Details →
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: MultiCart -->
+          <div class="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl p-5 md:p-6 dark:bg-neutral-900 dark:border-neutral-700 hover:shadow-md transition duration-200">
+            <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+              iScripts MultiCart
+            </h3>
+            <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400 leading-relaxed">
+              Multi Vendor Shopping Cart
+            </p>
+            <div class="mt-auto pt-4">
+              <a href="/multicart/" class="text-sm font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 inline-flex items-center gap-x-1">
+                View Details →
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 4: Printlogic -->
+          <div class="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl p-5 md:p-6 dark:bg-neutral-900 dark:border-neutral-700 hover:shadow-md transition duration-200">
+            <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+              iScripts Printlogic
+            </h3>
+            <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400 leading-relaxed">
+              Online Design Printing Platform
+            </p>
+            <div class="mt-auto pt-4">
+              <a href="/printlogic/" class="text-sm font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 inline-flex items-center gap-x-1">
+                View Details →
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 5: GoStores -->
+          <div class="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl p-5 md:p-6 dark:bg-neutral-900 dark:border-neutral-700 hover:shadow-md transition duration-200">
+            <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+              iScripts GoStores
+            </h3>
+            <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400 leading-relaxed">
+              Online Store Builder Platform
+            </p>
+            <div class="mt-auto pt-4">
+              <a href="/gostores/" class="text-sm font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 inline-flex items-center gap-x-1">
+                View Details →
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 6: Multicart Enterprise -->
+          <div class="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl p-5 md:p-6 dark:bg-neutral-900 dark:border-neutral-700 hover:shadow-md transition duration-200">
+            <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+              iScripts Multicart Enterprise
+            </h3>
+            <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400 leading-relaxed">
+              Enterprise Multi Vendor Shopping Cart
+            </p>
+            <div class="mt-auto pt-4">
+              <a href="/multicart-enterprise/" class="text-sm font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 inline-flex items-center gap-x-1">
+                View Details →
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 7: eSwap -->
+          <div class="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl p-5 md:p-6 dark:bg-neutral-900 dark:border-neutral-700 hover:shadow-md transition duration-200">
+            <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+              iScripts eSwap
+            </h3>
+            <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400 leading-relaxed">
+              Barter Exchange Platform
+            </p>
+            <div class="mt-auto pt-4">
+              <a href="/eswap/" class="text-sm font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 inline-flex items-center gap-x-1">
+                View Details →
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 8: Locologic -->
+          <div class="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl p-5 md:p-6 dark:bg-neutral-900 dark:border-neutral-700 hover:shadow-md transition duration-200">
+            <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+              iScripts Locologic
+            </h3>
+            <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400 leading-relaxed">
+              3PL Delivery Management Platform
+            </p>
+            <div class="mt-auto pt-4">
+              <a href="/locologic/" class="text-sm font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 inline-flex items-center gap-x-1">
+                View Details →
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 9: SocialWare -->
+          <div class="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl p-5 md:p-6 dark:bg-neutral-900 dark:border-neutral-700 hover:shadow-md transition duration-200">
+            <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+              iScripts SocialWare
+            </h3>
+            <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400 leading-relaxed">
+              Social Networking Platform
+            </p>
+            <div class="mt-auto pt-4">
+              <a href="/socialware/" class="text-sm font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 inline-flex items-center gap-x-1">
+                View Details →
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-10 text-center">
+          <a href="/productlisting.php" class="py-3 px-6 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500 transition">
+            View All Products →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 7. WANT TO CUSTOMIZE YOUR PRODUCT? (Features split + contact card)      -->
+    <!-- ======================================================================= -->
+    <section class="py-10 lg:py-14 border-b border-gray-200 dark:border-neutral-800">
+      <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+          <h2 class="text-2xl md:text-4xl font-bold text-gray-800 dark:text-white">
+            Want to Customize Your Product?
+          </h2>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <!-- Left: 3 Feature Rows -->
+          <div class="lg:col-span-7 space-y-6">
+            
+            <div class="flex gap-x-4">
+              <div class="size-10 rounded-lg bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400 flex items-center justify-center shrink-0">
+                <svg class="size-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-gray-800 dark:text-white">Your Very own Development Team</h3>
+                <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400 leading-relaxed">
+                  Think of the iScripts customization team as your personal development team, led by your dedicated Account Manager. They'll make it their business to learn everything about your business.
+                </p>
+                <div class="mt-2">
+                  <a href="/dedicated-development-services.php" class="text-sm font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400">
+                    View More →
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-x-4">
+              <div class="size-10 rounded-lg bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400 flex items-center justify-center shrink-0">
+                <svg class="size-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-gray-800 dark:text-white">Professional Experience</h3>
+                <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400 leading-relaxed">
+                  iScripts employees are well educated with more than five years of technology experience. They are extensively screened and given further training in-house. They have experience in setting-up, customizing, and optimizing the product to any level as required. Our server management and DevOps team can advise and manage all your cloud and other infrastructure needs.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-x-4">
+              <div class="size-10 rounded-lg bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400 flex items-center justify-center shrink-0">
+                <svg class="size-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-gray-800 dark:text-white">Responsive Support</h3>
+                <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400 leading-relaxed">
+                  Have a question? No problem. Send your Account Manager an email, and they will respond by email or call you at a convenient time.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Contact Card -->
+          <div class="lg:col-span-5">
+            <div class="bg-gray-50 dark:bg-neutral-800/80 border border-gray-200 dark:border-neutral-700 rounded-2xl p-6 sm:p-8 text-center shadow-xs">
+              <img src="https://www.iscripts.com/images/john.webp" alt="Jon S." class="size-24 rounded-full mx-auto object-cover mb-4" width="96" height="96">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white">Ask Jon S.</h3>
+              <p class="text-sm font-medium text-blue-600 dark:text-blue-400">Startup Coach</p>
+              
+              <div class="mt-4">
+                <a href="tel:13124236728" class="text-sm font-bold text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">
+                  1-(312)-423-6728
+                </a>
+              </div>
+
+              <div class="mt-4">
+                <a href="/contactus.php" class="py-2.5 px-5 inline-flex items-center text-sm font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition">
+                  Email Us →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 8. OUR TECHNOLOGIES (Preline Logo Cloud)                               -->
+    <!-- ======================================================================= -->
+    <section class="py-10 lg:py-14 border-b border-gray-200 dark:border-neutral-800">
+      <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <div class="max-w-2xl mx-auto text-center mb-10">
+          <h2 class="text-2xl md:text-4xl font-bold text-gray-800 dark:text-white">
+            Our Technologies
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-6 items-center">
+          <div class="p-3 flex justify-center">
+            <img src="https://www.iscripts.com/images/php-mysql.png" alt="PHP MySQL" class="max-h-12 w-auto" width="140" height="68">
+          </div>
+          <div class="p-3 flex justify-center">
+            <img src="https://www.iscripts.com/images/react-native.png" alt="React Native" class="max-h-12 w-auto" width="110" height="68">
+          </div>
+          <div class="p-3 flex justify-center">
+            <img src="https://www.iscripts.com/images/node-js.png" alt="Node.js" class="max-h-12 w-auto" width="65" height="68">
+          </div>
+          <div class="p-3 flex justify-center">
+            <img src="https://www.iscripts.com/images/angular-js.png" alt="AngularJS" class="max-h-12 w-auto" width="53" height="68">
+          </div>
+          <div class="p-3 flex justify-center">
+            <img src="https://www.iscripts.com/images/ios.png" alt="iOS" class="max-h-12 w-auto" width="111" height="68">
+          </div>
+          <div class="p-3 flex justify-center">
+            <img src="https://www.iscripts.com/images/android.png" alt="Android" class="max-h-12 w-auto" width="74" height="68">
+          </div>
+          <div class="p-3 flex justify-center">
+            <img src="https://www.iscripts.com/images/aws1.png" alt="AWS" class="max-h-12 w-auto" width="114" height="68">
+          </div>
+          <div class="p-3 flex justify-center">
+            <img src="https://www.iscripts.com/images/dot-net.png" alt=".NET" class="max-h-12 w-auto" width="69" height="68">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 9. EMPOWERING YOUR STARTUP (Preline Stepper / Timeline)                -->
+    <!-- ======================================================================= -->
+    <section class="py-10 lg:py-14 border-b border-gray-200 dark:border-neutral-800">
+      <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mx-auto text-center mb-10 lg:mb-14">
+          <h2 class="text-2xl md:text-4xl font-bold text-gray-800 dark:text-white">
+            Empowering Your Startup
+          </h2>
+          <p class="mt-4 text-sm sm:text-base text-gray-600 dark:text-neutral-400 leading-relaxed text-start sm:text-center">
+            Converting an idea into a successful business demands a lot of domain knowledge, technical proficiency, deep understanding, and dedication. Our technology platforms and frameworks can help your startup ideas hit the market in 60% less time compared to developing them from scratch. We follow the steps below to turn your idea into a successful business:
+          </p>
+        </div>
+
+        <!-- Desktop Horizontal Flow -->
+        <div class="hidden lg:grid grid-cols-6 gap-4">
+          <div class="flex flex-col items-center text-center">
+            <div class="size-10 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-sm shadow-sm ring-4 ring-blue-50 dark:ring-blue-900/30">
+              1
+            </div>
+            <h3 class="mt-3 text-base font-bold text-gray-800 dark:text-white">Concept</h3>
+            <p class="mt-1 text-xs text-gray-500 dark:text-neutral-400 leading-relaxed">
+              We validate your idea by working on prototypes, proof of concepts, and testing against the market segment.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div class="size-10 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-sm shadow-sm ring-4 ring-blue-50 dark:ring-blue-900/30">
+              2
+            </div>
+            <h3 class="mt-3 text-base font-bold text-gray-800 dark:text-white">Analysis</h3>
+            <p class="mt-1 text-xs text-gray-500 dark:text-neutral-400 leading-relaxed">
+              With the help of wireframes, SOW, etc., we analyze the idea to give it a shape for implementation.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div class="size-10 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-sm shadow-sm ring-4 ring-blue-50 dark:ring-blue-900/30">
+              3
+            </div>
+            <h3 class="mt-3 text-base font-bold text-gray-800 dark:text-white">Design</h3>
+            <p class="mt-1 text-xs text-gray-500 dark:text-neutral-400 leading-relaxed">
+              The UX/UI team will work to create interfaces that will engage your audience in the best way possible.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div class="size-10 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-sm shadow-sm ring-4 ring-blue-50 dark:ring-blue-900/30">
+              4
+            </div>
+            <h3 class="mt-3 text-base font-bold text-gray-800 dark:text-white">Develop</h3>
+            <p class="mt-1 text-xs text-gray-500 dark:text-neutral-400 leading-relaxed">
+              The functionalities are added to the pre-designed interfaces programmatically, giving life to your startup idea.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div class="size-10 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-sm shadow-sm ring-4 ring-blue-50 dark:ring-blue-900/30">
+              5
+            </div>
+            <h3 class="mt-3 text-base font-bold text-gray-800 dark:text-white">QA</h3>
+            <p class="mt-1 text-xs text-gray-500 dark:text-neutral-400 leading-relaxed">
+              We carry out unit testing, integration testing, speed testing, security testing, and load testing to make sure the product is ready for market.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div class="size-10 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-sm shadow-sm ring-4 ring-blue-50 dark:ring-blue-900/30">
+              6
+            </div>
+            <h3 class="mt-3 text-base font-bold text-gray-800 dark:text-white">Launch</h3>
+            <p class="mt-1 text-xs text-gray-500 dark:text-neutral-400 leading-relaxed">
+              We will help you with deployment in the most optimized cloud platforms for seamless working of the application function.
+            </p>
+          </div>
+        </div>
+
+        <!-- Mobile Vertical Timeline -->
+        <div class="lg:hidden max-w-md mx-auto space-y-6 relative before:absolute before:top-2 before:bottom-2 before:start-4 before:w-0.5 before:bg-gray-200 dark:before:bg-neutral-700">
+          <div class="relative flex items-start gap-x-4">
+            <div class="size-8 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-xs shrink-0 ring-4 ring-white dark:ring-neutral-900 z-10">1</div>
+            <div>
+              <h3 class="text-base font-bold text-gray-800 dark:text-white">Concept</h3>
+              <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">We validate your idea by working on prototypes, proof of concepts, and testing against the market segment.</p>
+            </div>
+          </div>
+
+          <div class="relative flex items-start gap-x-4">
+            <div class="size-8 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-xs shrink-0 ring-4 ring-white dark:ring-neutral-900 z-10">2</div>
+            <div>
+              <h3 class="text-base font-bold text-gray-800 dark:text-white">Analysis</h3>
+              <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">With the help of wireframes, SOW, etc., we analyze the idea to give it a shape for implementation.</p>
+            </div>
+          </div>
+
+          <div class="relative flex items-start gap-x-4">
+            <div class="size-8 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-xs shrink-0 ring-4 ring-white dark:ring-neutral-900 z-10">3</div>
+            <div>
+              <h3 class="text-base font-bold text-gray-800 dark:text-white">Design</h3>
+              <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">The UX/UI team will work to create interfaces that will engage your audience in the best way possible.</p>
+            </div>
+          </div>
+
+          <div class="relative flex items-start gap-x-4">
+            <div class="size-8 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-xs shrink-0 ring-4 ring-white dark:ring-neutral-900 z-10">4</div>
+            <div>
+              <h3 class="text-base font-bold text-gray-800 dark:text-white">Develop</h3>
+              <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">The functionalities are added to the pre-designed interfaces programmatically, giving life to your startup idea.</p>
+            </div>
+          </div>
+
+          <div class="relative flex items-start gap-x-4">
+            <div class="size-8 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-xs shrink-0 ring-4 ring-white dark:ring-neutral-900 z-10">5</div>
+            <div>
+              <h3 class="text-base font-bold text-gray-800 dark:text-white">QA</h3>
+              <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">We carry out unit testing, integration testing, speed testing, security testing, and load testing to make sure the product is ready for market.</p>
+            </div>
+          </div>
+
+          <div class="relative flex items-start gap-x-4">
+            <div class="size-8 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-xs shrink-0 ring-4 ring-white dark:ring-neutral-900 z-10">6</div>
+            <div>
+              <h3 class="text-base font-bold text-gray-800 dark:text-white">Launch</h3>
+              <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">We will help you with deployment in the most optimized cloud platforms for seamless working of the application function.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 10. TESTIMONIALS (Preline Carousel, genuine reviews, no star ratings)  -->
+    <!-- ======================================================================= -->
+    <section class="py-10 lg:py-14 border-b border-gray-200 dark:border-neutral-800">
+      <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-2xl mx-auto text-center mb-10">
+          <h2 class="text-2xl md:text-4xl font-bold text-gray-800 dark:text-white">
+            What iScripts Customers Say
+          </h2>
+        </div>
+
+        <div data-hs-carousel='{
+            "loadingClasses": "opacity-0",
+            "isAutoPlay": true,
+            "speed": 6000
+          }' class="relative max-w-4xl mx-auto">
+          
+          <div class="hs-carousel relative overflow-hidden w-full min-h-[220px] bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 rounded-2xl p-6 sm:p-10 shadow-2xs">
+            <div class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
+              
+              <!-- Review 1 -->
+              <div class="hs-carousel-slide p-6 sm:p-10 flex flex-col justify-center text-center">
+                <blockquote class="text-base sm:text-lg text-gray-700 dark:text-neutral-300 italic leading-relaxed">
+                  "I really appreciate you from the initial point of contact all the way through the thorough detail you and your team at iScripts have given me on my project. I couldn't be a happier client!"
+                </blockquote>
+                <p class="mt-4 text-sm font-semibold text-gray-800 dark:text-white">
+                  Garrett Richardson, HoopCliq.com
+                </p>
+              </div>
+
+              <!-- Review 2 -->
+              <div class="hs-carousel-slide p-6 sm:p-10 flex flex-col justify-center text-center">
+                <blockquote class="text-base sm:text-lg text-gray-700 dark:text-neutral-300 italic leading-relaxed">
+                  "I engaged iScripts to design a customized version of PrintLogic for my company and the follow up from contract initiation to go live was a very smooth process. The team at iScripts were very accommodating."
+                </blockquote>
+                <p class="mt-4 text-sm font-semibold text-gray-800 dark:text-white">
+                  Kai Lo, Scubadge.com
+                </p>
+              </div>
+
+              <!-- Review 3 -->
+              <div class="hs-carousel-slide p-6 sm:p-10 flex flex-col justify-center text-center">
+                <blockquote class="text-base sm:text-lg text-gray-700 dark:text-neutral-300 italic leading-relaxed">
+                  "iScripts was a game changer for me. I knew what I wanted to do and how I wanted to do it. The challenge for me was to cost-effectively build the application. I looked at a number of different options, before finalizing iScripts platform."
+                </blockquote>
+                <p class="mt-4 text-sm font-semibold text-gray-800 dark:text-white">
+                  Mike Serrano, Classroom2Classroom.com
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <button type="button" class="hs-carousel-prev hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-10 h-full text-gray-800 hover:bg-gray-800/10 dark:text-white dark:hover:bg-white/10 rounded-s-2xl" aria-label="Previous">
+            <svg class="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            <span class="sr-only">Previous</span>
+          </button>
+          <button type="button" class="hs-carousel-next hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-10 h-full text-gray-800 hover:bg-gray-800/10 dark:text-white dark:hover:bg-white/10 rounded-e-2xl" aria-label="Next">
+            <span class="sr-only">Next</span>
+            <svg class="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 11. OUR DEVELOPMENT CENTER (Preline Image Gallery, 4 Real Photos)       -->
+    <!-- ======================================================================= -->
+    <section class="py-10 lg:py-14 border-b border-gray-200 dark:border-neutral-800">
+      <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-2xl mx-auto text-center mb-10">
+          <h2 class="text-2xl md:text-4xl font-bold text-gray-800 dark:text-white">
+            Our Development Center
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div>
+            <img src="https://www.iscripts.com/images/home_bottom_box_1.jpg" alt="web development company" class="w-full h-auto rounded-xl object-cover" width="450" height="430" loading="lazy">
+          </div>
+          <div>
+            <img src="https://www.iscripts.com/images/home_bottom_box_2.jpg" alt="iScripts Cultural events" class="w-full h-auto rounded-xl object-cover" width="450" height="430" loading="lazy">
+          </div>
+          <div>
+            <img src="https://www.iscripts.com/images/home_bottom_box_3.jpg" alt="Software company Work stations" class="w-full h-auto rounded-xl object-cover" width="450" height="430" loading="lazy">
+          </div>
+          <div>
+            <img src="https://www.iscripts.com/images/home_bottom_box_4.jpg" alt="Our staff" class="w-full h-auto rounded-xl object-cover" width="450" height="430" loading="lazy">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 12. CONNECT WITH OUR EXPERTS (Preline Contact Block + Accreditation)    -->
+    <!-- ======================================================================= -->
+    <section class="py-10 lg:py-14">
+      <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-2xl mx-auto text-center mb-10">
+          <h2 class="text-2xl md:text-4xl font-bold text-gray-800 dark:text-white">
+            Connect with our experts
+          </h2>
+          <p class="mt-2 text-base text-gray-600 dark:text-neutral-400">
+            Let us choose the best technology for your next web project
+          </p>
+        </div>
+
+        <!-- Form Card -->
+        <div class="max-w-xl mx-auto bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 rounded-2xl p-6 sm:p-8 shadow-sm">
+          <form id="contact-expert-form" class="space-y-4">
+            
+            <!-- Success message -->
+            <div id="form-success-alert" class="hidden bg-teal-50 border border-teal-200 text-sm text-teal-800 rounded-lg p-4 dark:bg-teal-800/30 dark:border-teal-900 dark:text-teal-500" role="alert">
+              Your request has been sent successfuly
+            </div>
+
+            <!-- Error message -->
+            <div id="form-error-alert" class="hidden bg-red-50 border border-red-200 text-sm text-red-800 rounded-lg p-4 dark:bg-red-800/30 dark:border-red-900 dark:text-red-500" role="alert">
+              Something went wrong
+            </div>
+
+            <div>
+              <label for="contact-name" class="block text-sm font-medium text-gray-700 dark:text-neutral-300 mb-1">Name</label>
+              <input type="text" id="contact-name" required class="py-2.5 px-3.5 block w-full border border-gray-300 rounded-lg text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-700 dark:text-white">
+            </div>
+
+            <div>
+              <label for="contact-email" class="block text-sm font-medium text-gray-700 dark:text-neutral-300 mb-1">Email</label>
+              <input type="email" id="contact-email" required class="py-2.5 px-3.5 block w-full border border-gray-300 rounded-lg text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-700 dark:text-white">
+            </div>
+
+            <div>
+              <label for="contact-phone" class="block text-sm font-medium text-gray-700 dark:text-neutral-300 mb-1">Phone</label>
+              <input type="tel" id="contact-phone" class="py-2.5 px-3.5 block w-full border border-gray-300 rounded-lg text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-700 dark:text-white">
+            </div>
+
+            <div>
+              <label for="contact-message" class="block text-sm font-medium text-gray-700 dark:text-neutral-300 mb-1">Message</label>
+              <textarea id="contact-message" required rows="3" class="py-2.5 px-3.5 block w-full border border-gray-300 rounded-lg text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-700 dark:text-white"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500 transition">
+              Contact our experts
+            </button>
+          </form>
+        </div>
+
+        <!-- Accreditation Logos -->
+        <div class="mt-12 pt-8 border-t border-gray-200 dark:border-neutral-800">
+          <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+            <img src="https://dlrvetgp71ck5.cloudfront.net/img/nasscom_logo.jpg" alt="Nasscom" class="h-10 w-auto" width="123" height="58" loading="lazy">
+            <img src="https://dlrvetgp71ck5.cloudfront.net/img/amazone_logo.jpg" alt="AWS premium member" class="h-10 w-auto" width="178" height="58" loading="lazy">
+            <img src="https://dlrvetgp71ck5.cloudfront.net/img/illinios_logo.png" alt="ITA" class="h-10 w-auto" width="124" height="58" loading="lazy">
+            <img src="https://dlrvetgp71ck5.cloudfront.net/img/clutch_logo.jpg" alt="Clutch" class="h-10 w-auto" width="226" height="58" loading="lazy">
+            <img src="https://dlrvetgp71ck5.cloudfront.net/img/bbb_A1_logo.jpg" alt="BBB" class="h-10 w-auto" width="85" height="58" loading="lazy">
+            <img src="https://dlrvetgp71ck5.cloudfront.net/img/design_drizzle_logo.jpg" alt="Design drizzle" class="h-10 w-auto" width="184" height="58" loading="lazy">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- 13. FOOTER (Preline Footer Block)                                        -->
+  <!-- ========================================================================= -->
+  <footer class="mt-auto bg-gray-900 w-full text-gray-300">
+    <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8 lg:pt-16 lg:pb-10">
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-xs font-semibold text-gray-200 uppercase tracking-wider">Quick Links</h4>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a class="text-gray-400 hover:text-white hover:underline transition" href="/faq.php">FAQ</a></li>
+            <li><a class="text-gray-400 hover:text-white hover:underline transition" href="/newsletter.php">Newsletter</a></li>
+            <li><a class="text-gray-400 hover:text-white hover:underline transition" href="/terms.php">Terms</a></li>
+            <li><a class="text-gray-400 hover:text-white hover:underline transition" href="/legalnotice.php">Legal Notice</a></li>
+            <li><a class="text-gray-400 hover:text-white hover:underline transition" href="/sitemap.php">Site Map</a></li>
+            <li><a class="text-gray-400 hover:text-white hover:underline transition" href="/blog/">Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4 class="text-xs font-semibold text-gray-200 uppercase tracking-wider">Services</h4>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a class="text-gray-400 hover:text-white hover:underline transition" href="/dedicated-development-services.php">Dedicated Development Services</a></li>
+            <li><a class="text-gray-400 hover:text-white hover:underline transition" href="/installation.php">Script Installation</a></li>
+            <li><a class="text-gray-400 hover:text-white hover:underline transition" href="/customization.php">Script Customization</a></li>
+            <li><a class="text-gray-400 hover:text-white hover:underline transition" href="/customdevelopment.php">Custom Programming</a></li>
+          </ul>
+        </div>
+
+        <!-- Partners -->
+        <div>
+          <h4 class="text-xs font-semibold text-gray-200 uppercase tracking-wider">Partners</h4>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a class="text-gray-400 hover:text-white hover:underline transition" href="/partnerprogram.php">Partner Programs</a></li>
+            <li><a class="text-gray-400 hover:text-white hover:underline transition" href="/partners.php">Partner Sign Up</a></li>
+            <li><a class="text-gray-400 hover:text-white hover:underline transition" href="/affiliateprogram.php">Affiliate Program</a></li>
+            <li><a class="text-gray-400 hover:text-white hover:underline transition" href="/affiliates.php">Affiliate Sign Up</a></li>
+          </ul>
+        </div>
+
+        <!-- Showcase -->
+        <div>
+          <h4 class="text-xs font-semibold text-gray-200 uppercase tracking-wider">Showcase</h4>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a class="text-gray-400 hover:text-white hover:underline transition" href="/listshowcases.php">Showcases</a></li>
+            <li><a class="text-gray-400 hover:text-white hover:underline transition" href="/addshowcases.php">Submit New</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Us & Follow Us -->
+        <div class="col-span-2 md:col-span-4 lg:col-span-1">
+          <h4 class="text-xs font-semibold text-gray-200 uppercase tracking-wider">Contact Us</h4>
+          <div class="mt-4 space-y-2.5 text-sm text-gray-400">
+            <p class="leading-relaxed">
+              1020 Milwaukee Ave, #245, Deerfield, IL - 60015, United States
+            </p>
+            <p>
+              <a class="hover:text-white hover:underline" href="mailto:sales@iscripts.com">sales@iscripts.com</a>
+            </p>
+            <div class="space-y-1">
+              <p><a class="hover:text-white" href="tel:13124236728">1-(312)-423-6728</a></p>
+              <p><a class="hover:text-white" href="tel:18005695538">1-(800)-569-5538</a></p>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <h4 class="text-xs font-semibold text-gray-200 uppercase tracking-wider">Follow Us</h4>
+            <div class="mt-3 flex items-center gap-x-2">
+              <a class="size-8 inline-flex justify-center items-center rounded-lg bg-neutral-800 text-gray-400 hover:text-white hover:bg-neutral-700 transition" href="https://twitter.com/iscriptsdotcom" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a class="size-8 inline-flex justify-center items-center rounded-lg bg-neutral-800 text-gray-400 hover:text-white hover:bg-neutral-700 transition" href="https://www.facebook.com/iscripts" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a class="size-8 inline-flex justify-center items-center rounded-lg bg-neutral-800 text-gray-400 hover:text-white hover:bg-neutral-700 transition" href="https://www.linkedin.com/company/iscripts.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="pt-6 border-t border-gray-800 text-center text-xs text-gray-400">
+        <p>Copyright © 2026 iScripts.com.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Preline Core JS -->
+  <script type="module" src="./node_modules/preline/dist/preline.js"></script>
+
+  <!-- Contact Form Handling -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const contactForm = document.getElementById('contact-expert-form');
+      const successAlert = document.getElementById('form-success-alert');
+      const errorAlert = document.getElementById('form-error-alert');
+
+      if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('contact-name').value.trim();
+          const email = document.getElementById('contact-email').value.trim();
+          const message = document.getElementById('contact-message').value.trim();
+
+          if (name && email && message) {
+            errorAlert.classList.add('hidden');
+            successAlert.classList.remove('hidden');
+            contactForm.reset();
+            setTimeout(() => {
+              successAlert.classList.add('hidden');
+            }, 6000);
+          } else {
+            successAlert.classList.add('hidden');
+            errorAlert.classList.remove('hidden');
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
