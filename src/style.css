@@ -1,6 +1,61 @@
 @import "tailwindcss";
+@import "./theme.css";
 @source "../node_modules/preline/dist/*.js";
 @source "../index.html";
 @source "../partials/*.html";
 @import "preline/variants.css";
 @import "preline/css/themes/theme.css";
+
+/* Tailwind CSS v4 Dark Mode Selector Variant */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Marquee & Subtle Motion Keyframes */
+@keyframes marquee-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marquee-left 32s linear infinite;
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  animation: marquee-right 32s linear infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 24s linear infinite;
+}
+
+/* Gradient blob pulse */
+@keyframes blob-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(20px, -20px) scale(1.05); }
+}
+
+.animate-blob {
+  animation: blob-float 16s ease-in-out infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-left,
+  .animate-marquee-right,
+  .animate-spin-slow,
+  .animate-blob {
+    animation: none !important;
+  }
+}

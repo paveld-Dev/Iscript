@@ -1,22 +1,23 @@
-<!-- ========== REUSABLE PRELINE HEADER PARTIAL ========== -->
-<header class="sticky top-0 inset-x-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-gray-200 dark:bg-neutral-900/95 dark:border-neutral-700">
-  <nav class="max-w-[85rem] w-full mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between" aria-label="Global">
-    <!-- Brand Logo -->
-    <a class="flex items-center focus:outline-hidden focus:ring-2 focus:ring-blue-500 rounded-md" href="/" aria-label="iScripts">
-      <img src="https://www.iscripts.com/images/iscripts-logo-wyt.webp" alt="iScripts" class="h-9 w-auto brightness-0 dark:brightness-100 dark:invert-0" width="160" height="36">
+<!-- ========== REUSABLE PRELINE HEADER PARTIAL (RESTYLED GLASSMORPHIC) ========== -->
+<header class="sticky top-0 inset-x-0 z-50 w-full bg-white/70 dark:bg-[#0B1020]/75 backdrop-blur-xl border-b border-white/70 dark:border-white/10 shadow-[0_4px_30px_rgba(17,24,39,0.03)] transition-colors duration-200">
+  <nav class="max-w-[85rem] w-full mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between" aria-label="Global">
+    <!-- Brand Logo (Light Mode / Dark Mode) -->
+    <a class="flex items-center focus:outline-hidden focus:ring-2 focus:ring-accent rounded-lg" href="/" aria-label="iScripts">
+      <img src="/images/iscripts-logo-light.png" alt="iScripts" class="h-9 w-auto block dark:hidden" width="160" height="36">
+      <img src="/images/iscripts-logo-dark.png" alt="iScripts" class="h-9 w-auto hidden dark:block" width="160" height="36">
     </a>
 
     <!-- Mobile Controls (Theme Toggle + Collapse) -->
-    <div class="flex items-center gap-x-1 lg:hidden">
+    <div class="flex items-center gap-x-2 lg:hidden">
       <!-- Theme Switch Mobile -->
-      <button type="button" class="hs-dark-mode-active:hidden inline-flex items-center justify-center size-9 text-gray-700 hover:bg-gray-100 rounded-lg dark:text-neutral-300 dark:hover:bg-neutral-800" data-hs-theme-click-value="dark" aria-label="Dark mode">
+      <button type="button" class="hs-dark-mode-active:hidden inline-flex items-center justify-center size-9 text-ink bg-white/60 border border-white/80 rounded-full shadow-2xs dark:text-neutral-200" data-hs-theme-click-value="dark" aria-label="Dark mode">
         <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
       </button>
-      <button type="button" class="hs-dark-mode-active:inline-flex hidden items-center justify-center size-9 text-gray-700 hover:bg-gray-100 rounded-lg dark:text-neutral-300 dark:hover:bg-neutral-800" data-hs-theme-click-value="default" aria-label="Light mode">
+      <button type="button" class="hs-dark-mode-active:inline-flex hidden items-center justify-center size-9 text-ink bg-white/10 border border-white/15 rounded-full shadow-2xs dark:text-neutral-200" data-hs-theme-click-value="default" aria-label="Light mode">
         <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
       </button>
 
-      <button type="button" class="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-lg border border-gray-200 font-medium bg-white text-gray-700 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:ring-2 focus:ring-blue-600 dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-700" id="hs-header-collapse" aria-expanded="false" aria-controls="hs-header-nav" data-hs-collapse="#hs-header-nav" aria-label="Toggle navigation">
+      <button type="button" class="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-xl border border-white/80 font-medium bg-white/70 text-ink shadow-2xs hover:bg-white focus:outline-hidden focus:ring-2 focus:ring-accent dark:bg-white/10 dark:border-white/10 dark:text-neutral-200" id="hs-header-collapse" aria-expanded="false" aria-controls="hs-header-nav" data-hs-collapse="#hs-header-nav" aria-label="Toggle navigation">
         <svg class="hs-collapse-open:hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
         <svg class="hs-collapse-open:block hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
       </button>
@@ -24,183 +25,177 @@
 
     <!-- Navigation Links -->
     <div id="hs-header-nav" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow lg:block" aria-labelledby="hs-header-collapse">
-      <div class="flex flex-col gap-y-4 gap-x-0 mt-5 lg:flex-row lg:items-center lg:justify-center lg:gap-y-0 lg:gap-x-6 lg:mt-0">
+      <div class="flex flex-col gap-y-3 gap-x-0 mt-5 lg:flex-row lg:items-center lg:justify-center lg:gap-y-0 lg:gap-x-7 lg:mt-0 font-medium text-sm">
 
         <!-- Mega Menu: Products -->
         <div class="hs-dropdown [--strategy:static] lg:[--strategy:fixed] [--adaptive:none]">
-          <button id="hs-mega-menu-products" type="button" class="hs-dropdown-toggle flex items-center w-full text-gray-700 hover:text-blue-600 font-medium py-1.5 focus:outline-hidden focus:text-blue-600 dark:text-neutral-300 dark:hover:text-blue-400 dark:focus:text-blue-400" aria-haspopup="menu" aria-expanded="false" aria-label="Products">
+          <button id="hs-mega-menu-products" type="button" class="hs-dropdown-toggle flex items-center w-full text-ink/80 hover:text-accent-dark dark:text-neutral-200 dark:hover:text-accent py-1.5 focus:outline-hidden transition" aria-haspopup="menu" aria-expanded="false" aria-label="Products">
             Products
-            <svg class="hs-dropdown-open:-rotate-180 duration-200 shrink-0 ms-1 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            <svg class="hs-dropdown-open:-rotate-180 duration-200 shrink-0 ms-1 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
           </button>
 
-          <div class="hs-dropdown-menu transition-[opacity,margin] duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-full hidden z-50 start-0 top-full bg-white lg:shadow-xl rounded-xl py-6 px-4 lg:px-8 dark:bg-neutral-900 border lg:border-gray-200 dark:border-neutral-700" role="menu" aria-labelledby="hs-mega-menu-products">
+          <div class="hs-dropdown-menu transition-[opacity,margin] duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-full hidden z-50 start-0 top-full bg-white/90 dark:bg-[#0E1528]/95 backdrop-blur-2xl lg:shadow-[0_20px_50px_rgba(17,24,39,0.1)] rounded-2xl py-6 px-4 lg:px-8 border border-white/80 dark:border-white/10" role="menu" aria-labelledby="hs-mega-menu-products">
             <div class="max-w-[85rem] mx-auto">
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-3">
-                <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/editprime/">
-                  <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">EditPrime</p>
-                  <p class="text-xs text-gray-500 dark:text-neutral-400">Mobile Video Editing SDK</p>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-2.5">
+                <a class="p-2.5 rounded-xl hover:bg-white/80 dark:hover:bg-white/5 border border-transparent hover:border-white/80 dark:hover:border-white/10 transition group" href="/editprime/">
+                  <p class="text-sm font-semibold text-ink dark:text-white group-hover:text-accent-dark dark:group-hover:text-accent">EditPrime</p>
+                  <p class="text-xs text-muted dark:text-neutral-400">Mobile Video Editing SDK</p>
                 </a>
-                <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/socialware/">
-                  <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">SocialWare</p>
-                  <p class="text-xs text-gray-500 dark:text-neutral-400">Social Networking Platform</p>
+                <a class="p-2.5 rounded-xl hover:bg-white/80 dark:hover:bg-white/5 border border-transparent hover:border-white/80 dark:hover:border-white/10 transition group" href="/socialware/">
+                  <p class="text-sm font-semibold text-ink dark:text-white group-hover:text-accent-dark dark:group-hover:text-accent">SocialWare</p>
+                  <p class="text-xs text-muted dark:text-neutral-400">Social Networking Platform</p>
                 </a>
-                <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/multicart/">
-                  <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">MultiCart</p>
-                  <p class="text-xs text-gray-500 dark:text-neutral-400">Multi Vendor Shopping Cart</p>
+                <a class="p-2.5 rounded-xl hover:bg-white/80 dark:hover:bg-white/5 border border-transparent hover:border-white/80 dark:hover:border-white/10 transition group" href="/multicart/">
+                  <p class="text-sm font-semibold text-ink dark:text-white group-hover:text-accent-dark dark:group-hover:text-accent">MultiCart</p>
+                  <p class="text-xs text-muted dark:text-neutral-400">Multi Vendor Shopping Cart</p>
                 </a>
-                <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/eswap/">
-                  <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">eSwap</p>
-                  <p class="text-xs text-gray-500 dark:text-neutral-400">Barter Exchange Platform</p>
+                <a class="p-2.5 rounded-xl hover:bg-white/80 dark:hover:bg-white/5 border border-transparent hover:border-white/80 dark:hover:border-white/10 transition group" href="/eswap/">
+                  <p class="text-sm font-semibold text-ink dark:text-white group-hover:text-accent-dark dark:group-hover:text-accent">eSwap</p>
+                  <p class="text-xs text-muted dark:text-neutral-400">Barter Exchange Platform</p>
                 </a>
-                <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/autohoster/">
-                  <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">AutoHoster</p>
-                  <p class="text-xs text-gray-500 dark:text-neutral-400">Web Hosting Platform</p>
+                <a class="p-2.5 rounded-xl hover:bg-white/80 dark:hover:bg-white/5 border border-transparent hover:border-white/80 dark:hover:border-white/10 transition group" href="/autohoster/">
+                  <p class="text-sm font-semibold text-ink dark:text-white group-hover:text-accent-dark dark:group-hover:text-accent">AutoHoster</p>
+                  <p class="text-xs text-muted dark:text-neutral-400">Web Hosting Platform</p>
                 </a>
-                <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/printlogic/">
-                  <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">PrintLogic</p>
-                  <p class="text-xs text-gray-500 dark:text-neutral-400">Online Design Printing Platform</p>
+                <a class="p-2.5 rounded-xl hover:bg-white/80 dark:hover:bg-white/5 border border-transparent hover:border-white/80 dark:hover:border-white/10 transition group" href="/printlogic/">
+                  <p class="text-sm font-semibold text-ink dark:text-white group-hover:text-accent-dark dark:group-hover:text-accent">PrintLogic</p>
+                  <p class="text-xs text-muted dark:text-neutral-400">Online Design Printing Platform</p>
                 </a>
-                <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/reservelogic/">
-                  <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">ReserveLogic</p>
-                  <p class="text-xs text-gray-500 dark:text-neutral-400">Hotel Reservation Platform</p>
+                <a class="p-2.5 rounded-xl hover:bg-white/80 dark:hover:bg-white/5 border border-transparent hover:border-white/80 dark:hover:border-white/10 transition group" href="/reservelogic/">
+                  <p class="text-sm font-semibold text-ink dark:text-white group-hover:text-accent-dark dark:group-hover:text-accent">ReserveLogic</p>
+                  <p class="text-xs text-muted dark:text-neutral-400">Hotel Reservation Platform</p>
                 </a>
-                <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/gostores/">
-                  <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">GoStores</p>
-                  <p class="text-xs text-gray-500 dark:text-neutral-400">Online Store Builder Platform</p>
+                <a class="p-2.5 rounded-xl hover:bg-white/80 dark:hover:bg-white/5 border border-transparent hover:border-white/80 dark:hover:border-white/10 transition group" href="/gostores/">
+                  <p class="text-sm font-semibold text-ink dark:text-white group-hover:text-accent-dark dark:group-hover:text-accent">GoStores</p>
+                  <p class="text-xs text-muted dark:text-neutral-400">Online Store Builder Platform</p>
                 </a>
-                <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/easybiller/">
-                  <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">EasyBiller</p>
-                  <p class="text-xs text-gray-500 dark:text-neutral-400">Online Billing Service Platform</p>
+                <a class="p-2.5 rounded-xl hover:bg-white/80 dark:hover:bg-white/5 border border-transparent hover:border-white/80 dark:hover:border-white/10 transition group" href="/easybiller/">
+                  <p class="text-sm font-semibold text-ink dark:text-white group-hover:text-accent-dark dark:group-hover:text-accent">EasyBiller</p>
+                  <p class="text-xs text-muted dark:text-neutral-400">Online Billing Service Platform</p>
                 </a>
-                <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/socialwallet/">
-                  <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">SocialWallet</p>
-                  <p class="text-xs text-gray-500 dark:text-neutral-400">Peer-to-Peer Lending Platform</p>
+                <a class="p-2.5 rounded-xl hover:bg-white/80 dark:hover:bg-white/5 border border-transparent hover:border-white/80 dark:hover:border-white/10 transition group" href="/socialwallet/">
+                  <p class="text-sm font-semibold text-ink dark:text-white group-hover:text-accent-dark dark:group-hover:text-accent">SocialWallet</p>
+                  <p class="text-xs text-muted dark:text-neutral-400">Peer-to-Peer Lending Platform</p>
                 </a>
-                <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/easycreate/">
-                  <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">EasyCreate</p>
-                  <p class="text-xs text-gray-500 dark:text-neutral-400">Website Builder Platform</p>
+                <a class="p-2.5 rounded-xl hover:bg-white/80 dark:hover:bg-white/5 border border-transparent hover:border-white/80 dark:hover:border-white/10 transition group" href="/easycreate/">
+                  <p class="text-sm font-semibold text-ink dark:text-white group-hover:text-accent-dark dark:group-hover:text-accent">EasyCreate</p>
+                  <p class="text-xs text-muted dark:text-neutral-400">Website Builder Platform</p>
                 </a>
-                <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/visualcaster/">
-                  <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">VisualCaster</p>
-                  <p class="text-xs text-gray-500 dark:text-neutral-400">Video Streaming Service Platform</p>
+                <a class="p-2.5 rounded-xl hover:bg-white/80 dark:hover:bg-white/5 border border-transparent hover:border-white/80 dark:hover:border-white/10 transition group" href="/visualcaster/">
+                  <p class="text-sm font-semibold text-ink dark:text-white group-hover:text-accent-dark dark:group-hover:text-accent">VisualCaster</p>
+                  <p class="text-xs text-muted dark:text-neutral-400">Video Streaming Service Platform</p>
                 </a>
-                <a class="p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition" href="/locologic/">
-                  <p class="text-sm font-semibold text-gray-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400">Locologic</p>
-                  <p class="text-xs text-gray-500 dark:text-neutral-400">3PL Delivery Management Platform</p>
+                <a class="p-2.5 rounded-xl hover:bg-white/80 dark:hover:bg-white/5 border border-transparent hover:border-white/80 dark:hover:border-white/10 transition group" href="/locologic/">
+                  <p class="text-sm font-semibold text-ink dark:text-white group-hover:text-accent-dark dark:group-hover:text-accent">Locologic</p>
+                  <p class="text-xs text-muted dark:text-neutral-400">3PL Delivery Management Platform</p>
                 </a>
               </div>
               <div class="mt-4 pt-4 border-t border-gray-100 dark:border-neutral-800 text-center">
-                <a class="text-sm font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 inline-flex items-center gap-x-1" href="/productlisting.php">
-                  List All →
+                <a class="text-sm font-semibold text-accent-dark dark:text-accent hover:text-accent inline-flex items-center gap-x-1" href="/productlisting.php">
+                  List All Products →
                 </a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Dropdown: Services -->
+        <!-- Services Dropdown -->
         <div class="hs-dropdown relative inline-flex">
-          <button id="hs-dropdown-services" type="button" class="hs-dropdown-toggle flex items-center w-full text-gray-700 hover:text-blue-600 font-medium py-1.5 focus:outline-hidden focus:text-blue-600 dark:text-neutral-300 dark:hover:text-blue-400 dark:focus:text-blue-400" aria-haspopup="menu" aria-expanded="false" aria-label="Services">
+          <button id="hs-dropdown-services" type="button" class="hs-dropdown-toggle flex items-center w-full text-ink/80 hover:text-accent-dark dark:text-neutral-200 dark:hover:text-accent py-1.5 focus:outline-hidden transition" aria-haspopup="menu" aria-expanded="false" aria-label="Services">
             Services
-            <svg class="hs-dropdown-open:-rotate-180 duration-200 shrink-0 ms-1 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            <svg class="hs-dropdown-open:-rotate-180 duration-200 shrink-0 ms-1 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
           </button>
-          <div class="hs-dropdown-menu transition-[opacity,margin] duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-60 hidden z-50 bg-white shadow-md rounded-xl p-2 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700" role="menu" aria-labelledby="hs-dropdown-services">
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/customization.php">Customization</a>
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/graphic-design-service.php">Design Services</a>
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/customdevelopment.php">Programming</a>
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/installation.php">Installation</a>
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/dedicated-development-services.php">Dedicated Development</a>
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/web-hosts.php">Suggested Web Hosts</a>
+          <div class="hs-dropdown-menu transition-[opacity,margin] duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-60 hidden z-50 bg-white/90 dark:bg-[#0E1528]/95 backdrop-blur-2xl shadow-[0_20px_40px_rgba(17,24,39,0.08)] rounded-2xl p-2 border border-white/80 dark:border-white/10" role="menu" aria-labelledby="hs-dropdown-services">
+            <a class="flex items-center py-2 px-3 rounded-xl text-sm text-ink dark:text-neutral-200 hover:bg-white dark:hover:bg-white/5 transition" href="/customization.php">Customization</a>
+            <a class="flex items-center py-2 px-3 rounded-xl text-sm text-ink dark:text-neutral-200 hover:bg-white dark:hover:bg-white/5 transition" href="/graphic-design-service.php">Design Services</a>
+            <a class="flex items-center py-2 px-3 rounded-xl text-sm text-ink dark:text-neutral-200 hover:bg-white dark:hover:bg-white/5 transition" href="/customdevelopment.php">Programming</a>
+            <a class="flex items-center py-2 px-3 rounded-xl text-sm text-ink dark:text-neutral-200 hover:bg-white dark:hover:bg-white/5 transition" href="/installation.php">Installation</a>
+            <a class="flex items-center py-2 px-3 rounded-xl text-sm text-ink dark:text-neutral-200 hover:bg-white dark:hover:bg-white/5 transition" href="/dedicated-development-services.php">Dedicated Development</a>
+            <a class="flex items-center py-2 px-3 rounded-xl text-sm text-ink dark:text-neutral-200 hover:bg-white dark:hover:bg-white/5 transition" href="/web-hosts.php">Suggested Web Hosts</a>
           </div>
         </div>
 
-        <!-- Dropdown: Showcase -->
+        <!-- Showcase Dropdown -->
         <div class="hs-dropdown relative inline-flex">
-          <button id="hs-dropdown-showcase" type="button" class="hs-dropdown-toggle flex items-center w-full text-gray-700 hover:text-blue-600 font-medium py-1.5 focus:outline-hidden focus:text-blue-600 dark:text-neutral-300 dark:hover:text-blue-400 dark:focus:text-blue-400" aria-haspopup="menu" aria-expanded="false" aria-label="Showcase">
+          <button id="hs-dropdown-showcase" type="button" class="hs-dropdown-toggle flex items-center w-full text-ink/80 hover:text-accent-dark dark:text-neutral-200 dark:hover:text-accent py-1.5 focus:outline-hidden transition" aria-haspopup="menu" aria-expanded="false" aria-label="Showcase">
             Showcase
-            <svg class="hs-dropdown-open:-rotate-180 duration-200 shrink-0 ms-1 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            <svg class="hs-dropdown-open:-rotate-180 duration-200 shrink-0 ms-1 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
           </button>
-          <div class="hs-dropdown-menu transition-[opacity,margin] duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-52 hidden z-50 bg-white shadow-md rounded-xl p-2 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700" role="menu" aria-labelledby="hs-dropdown-showcase">
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/listshowcases.php">Showcases</a>
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/addshowcases.php">Submit New</a>
+          <div class="hs-dropdown-menu transition-[opacity,margin] duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-52 hidden z-50 bg-white/90 dark:bg-[#0E1528]/95 backdrop-blur-2xl shadow-[0_20px_40px_rgba(17,24,39,0.08)] rounded-2xl p-2 border border-white/80 dark:border-white/10" role="menu" aria-labelledby="hs-dropdown-showcase">
+            <a class="flex items-center py-2 px-3 rounded-xl text-sm text-ink dark:text-neutral-200 hover:bg-white dark:hover:bg-white/5 transition" href="/listshowcases.php">Showcases</a>
+            <a class="flex items-center py-2 px-3 rounded-xl text-sm text-ink dark:text-neutral-200 hover:bg-white dark:hover:bg-white/5 transition" href="/addshowcases.php">Submit New</a>
           </div>
         </div>
 
-        <!-- Dropdown: Support -->
+        <!-- Support Dropdown -->
         <div class="hs-dropdown relative inline-flex">
-          <button id="hs-dropdown-support" type="button" class="hs-dropdown-toggle flex items-center w-full text-gray-700 hover:text-blue-600 font-medium py-1.5 focus:outline-hidden focus:text-blue-600 dark:text-neutral-300 dark:hover:text-blue-400 dark:focus:text-blue-400" aria-haspopup="menu" aria-expanded="false" aria-label="Support">
+          <button id="hs-dropdown-support" type="button" class="hs-dropdown-toggle flex items-center w-full text-ink/80 hover:text-accent-dark dark:text-neutral-200 dark:hover:text-accent py-1.5 focus:outline-hidden transition" aria-haspopup="menu" aria-expanded="false" aria-label="Support">
             Support
-            <svg class="hs-dropdown-open:-rotate-180 duration-200 shrink-0 ms-1 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            <svg class="hs-dropdown-open:-rotate-180 duration-200 shrink-0 ms-1 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
           </button>
-          <div class="hs-dropdown-menu transition-[opacity,margin] duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-56 hidden z-50 bg-white shadow-md rounded-xl p-2 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700" role="menu" aria-labelledby="hs-dropdown-support">
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/support/">Help Desk</a>
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/support/kb/">Knowledgebase</a>
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/faq.php">General FAQ</a>
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/web-hosts.php">Suggested Web Hosts</a>
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/patches.php">Patches</a>
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/resources.php">Resources</a>
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/quickstartguides.php">Quickstart Guides</a>
+          <div class="hs-dropdown-menu transition-[opacity,margin] duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-56 hidden z-50 bg-white/90 dark:bg-[#0E1528]/95 backdrop-blur-2xl shadow-[0_20px_40px_rgba(17,24,39,0.08)] rounded-2xl p-2 border border-white/80 dark:border-white/10" role="menu" aria-labelledby="hs-dropdown-support">
+            <a class="flex items-center py-2 px-3 rounded-xl text-sm text-ink dark:text-neutral-200 hover:bg-white dark:hover:bg-white/5 transition" href="/support/">Help Desk</a>
+            <a class="flex items-center py-2 px-3 rounded-xl text-sm text-ink dark:text-neutral-200 hover:bg-white dark:hover:bg-white/5 transition" href="/support/kb/">Knowledgebase</a>
+            <a class="flex items-center py-2 px-3 rounded-xl text-sm text-ink dark:text-neutral-200 hover:bg-white dark:hover:bg-white/5 transition" href="/faq.php">General FAQ</a>
+            <a class="flex items-center py-2 px-3 rounded-xl text-sm text-ink dark:text-neutral-200 hover:bg-white dark:hover:bg-white/5 transition" href="/web-hosts.php">Suggested Web Hosts</a>
+            <a class="flex items-center py-2 px-3 rounded-xl text-sm text-ink dark:text-neutral-200 hover:bg-white dark:hover:bg-white/5 transition" href="/patches.php">Patches</a>
+            <a class="flex items-center py-2 px-3 rounded-xl text-sm text-ink dark:text-neutral-200 hover:bg-white dark:hover:bg-white/5 transition" href="/resources.php">Resources</a>
+            <a class="flex items-center py-2 px-3 rounded-xl text-sm text-ink dark:text-neutral-200 hover:bg-white dark:hover:bg-white/5 transition" href="/quickstartguides.php">Quickstart Guides</a>
           </div>
         </div>
 
-        <!-- Dropdown: Contact us -->
+        <!-- Company Dropdown -->
         <div class="hs-dropdown relative inline-flex">
-          <button id="hs-dropdown-contact" type="button" class="hs-dropdown-toggle flex items-center w-full text-gray-700 hover:text-blue-600 font-medium py-1.5 focus:outline-hidden focus:text-blue-600 dark:text-neutral-300 dark:hover:text-blue-400 dark:focus:text-blue-400" aria-haspopup="menu" aria-expanded="false" aria-label="Contact us">
-            Contact us
-            <svg class="hs-dropdown-open:-rotate-180 duration-200 shrink-0 ms-1 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          <button id="hs-dropdown-company" type="button" class="hs-dropdown-toggle flex items-center w-full text-ink/80 hover:text-accent-dark dark:text-neutral-200 dark:hover:text-accent py-1.5 focus:outline-hidden transition" aria-haspopup="menu" aria-expanded="false" aria-label="Company">
+            Company
+            <svg class="hs-dropdown-open:-rotate-180 duration-200 shrink-0 ms-1 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
           </button>
-          <div class="hs-dropdown-menu transition-[opacity,margin] duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-52 hidden z-50 bg-white shadow-md rounded-xl p-2 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700" role="menu" aria-labelledby="hs-dropdown-contact">
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/partnerprogram.php">Partner Programs</a>
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/affiliateprogram.php">Affiliate Program</a>
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/support/">Help Desk</a>
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/viewfeedback.php">Feedback</a>
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/scriptrequest.php">Script Request</a>
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/reviews.php">Reviews</a>
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/contactus.php">Contact Us</a>
+          <div class="hs-dropdown-menu transition-[opacity,margin] duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-52 hidden z-50 bg-white/90 dark:bg-[#0E1528]/95 backdrop-blur-2xl shadow-[0_20px_40px_rgba(17,24,39,0.08)] rounded-2xl p-2 border border-white/80 dark:border-white/10" role="menu" aria-labelledby="hs-dropdown-company">
+            <a class="flex items-center py-2 px-3 rounded-xl text-sm text-ink dark:text-neutral-200 hover:bg-white dark:hover:bg-white/5 transition" href="/aboutus.php">About Us</a>
+            <a class="flex items-center py-2 px-3 rounded-xl text-sm text-ink dark:text-neutral-200 hover:bg-white dark:hover:bg-white/5 transition" href="/people.php">People</a>
+            <a class="flex items-center py-2 px-3 rounded-xl text-sm text-ink dark:text-neutral-200 hover:bg-white dark:hover:bg-white/5 transition" href="/contactus.php">Contact Us</a>
           </div>
         </div>
 
-        <!-- Link: Blog -->
-        <a class="font-medium text-gray-700 hover:text-blue-600 py-1.5 focus:outline-hidden focus:text-blue-600 dark:text-neutral-300 dark:hover:text-blue-400 dark:focus:text-blue-400" href="/blog/">
+        <!-- Blog Link -->
+        <a class="text-ink/80 hover:text-accent-dark dark:text-neutral-200 dark:hover:text-accent py-1.5 focus:outline-hidden transition" href="/blog/">
           Blog
         </a>
 
-        <!-- Dropdown: Company -->
-        <div class="hs-dropdown relative inline-flex">
-          <button id="hs-dropdown-company" type="button" class="hs-dropdown-toggle flex items-center w-full text-gray-700 hover:text-blue-600 font-medium py-1.5 focus:outline-hidden focus:text-blue-600 dark:text-neutral-300 dark:hover:text-blue-400 dark:focus:text-blue-400" aria-haspopup="menu" aria-expanded="false" aria-label="Company">
-            Company
-            <svg class="hs-dropdown-open:-rotate-180 duration-200 shrink-0 ms-1 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-          </button>
-          <div class="hs-dropdown-menu transition-[opacity,margin] duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-52 hidden z-50 bg-white shadow-md rounded-xl p-2 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700" role="menu" aria-labelledby="hs-dropdown-company">
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/aboutus.php">About Us</a>
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/people.php">People</a>
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/contactus.php">Contact Us</a>
-          </div>
-        </div>
-
       </div>
 
-      <!-- Mobile CTA action: Login -->
-      <div class="pt-4 border-t border-gray-100 dark:border-neutral-800 lg:hidden flex flex-col gap-2">
-        <a class="py-2.5 px-4 text-center text-sm font-medium rounded-lg text-gray-700 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800" href="/logindirect.php">
+      <!-- Mobile Buttons -->
+      <div class="pt-4 border-t border-gray-200/50 dark:border-neutral-800 lg:hidden flex flex-col gap-2">
+        <a class="py-2.5 px-4 text-center text-sm font-medium rounded-full bg-white/80 dark:bg-white/10 text-ink dark:text-white" href="/logindirect.php">
           Login
+        </a>
+        <a class="py-2.5 px-5 text-center text-sm font-semibold rounded-full bg-accent text-white shadow-md shadow-accent/25" href="/contactus.php">
+          Contact Us →
         </a>
       </div>
     </div>
 
-    <!-- Desktop Right Controls: Theme Switch + Login -->
-    <div class="hidden lg:flex items-center gap-x-2">
-      <!-- Theme Switch Button -->
-      <button type="button" class="hs-dark-mode-active:hidden inline-flex items-center justify-center size-9 text-gray-700 hover:bg-gray-100 rounded-lg dark:text-neutral-300 dark:hover:bg-neutral-800 transition" data-hs-theme-click-value="dark" aria-label="Dark mode">
+    <!-- Desktop Right Controls: Theme Toggle + Login + Primary "Contact Us" Pill -->
+    <div class="hidden lg:flex items-center gap-x-3 xl:gap-x-4 shrink-0">
+      <!-- Theme Toggle -->
+      <button type="button" class="hs-dark-mode-active:hidden inline-flex items-center justify-center size-9 text-ink bg-white/60 hover:bg-white border border-white/80 rounded-full shadow-2xs dark:text-neutral-200 transition shrink-0" data-hs-theme-click-value="dark" aria-label="Dark mode">
         <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
       </button>
-      <button type="button" class="hs-dark-mode-active:inline-flex hidden items-center justify-center size-9 text-gray-700 hover:bg-gray-100 rounded-lg dark:text-neutral-300 dark:hover:bg-neutral-800 transition" data-hs-theme-click-value="default" aria-label="Light mode">
+      <button type="button" class="hs-dark-mode-active:inline-flex hidden items-center justify-center size-9 text-ink bg-white/10 hover:bg-white/20 border border-white/15 rounded-full shadow-2xs dark:text-neutral-200 transition shrink-0" data-hs-theme-click-value="default" aria-label="Light mode">
         <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
       </button>
 
-      <!-- Login Button -->
-      <a class="py-2 px-3 inline-flex items-center gap-x-1.5 text-sm font-medium rounded-lg text-gray-700 hover:bg-gray-100 focus:outline-hidden dark:text-neutral-300 dark:hover:bg-neutral-800 transition" href="/logindirect.php">
+      <!-- Login Link -->
+      <a class="text-sm font-medium text-ink hover:text-accent-dark dark:text-neutral-200 dark:hover:text-accent transition px-2 py-1 whitespace-nowrap shrink-0" href="/logindirect.php">
         Login
+      </a>
+
+      <!-- Primary Pill: Contact Us -->
+      <a href="/contactus.php" class="inline-flex items-center gap-x-2 rounded-full bg-accent hover:bg-accent-dark text-white pl-4 sm:pl-5 pr-2 py-2 text-sm font-medium shadow-md shadow-accent/20 hover:shadow-lg hover:shadow-accent/30 transition-all duration-200 group whitespace-nowrap shrink-0">
+        <span class="whitespace-nowrap">Contact Us</span>
+        <span class="size-6 rounded-full bg-white text-accent flex items-center justify-center transition-transform duration-200 group-hover:translate-x-0.5 shadow-2xs shrink-0">
+          <svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </span>
       </a>
     </div>
   </nav>
